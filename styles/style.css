@@ -1,10 +1,11 @@
 :root {
-    --color-1: #A3BEE7;
-    --color-2: #8086B0;
-    --color-2-a: rgba(182,211,235,0.5);
-    --color-3: #1A3E9B;
-    --color-4: #9C999D;
-    --color-5: #F6F8F8;
+    --color-1: #C7D2E4;
+    --color-2: #7AA6D1;
+    --color-2-a: rgba(122,166,209,0.50);
+    --color-3: #3282BF;
+    --color-4: #84918D;
+    --color-5: #DAEAEA;
+    --color-6: #1C2A25;
 }
 
 * {
@@ -31,7 +32,7 @@ header {
 /*  position: sticky;*/
   top: 0;
 /*    padding: 20px 35px;*/
-  background-color: #39a6b2;
+  background-color: var(--color-1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,8 +49,8 @@ header {
 header h1 {
   font-weight: bold;
   font-size: 40px;
-  color: var(--primary-color);
-  background-color: var( --secondary-color);
+  color: var(--color-6);
+/*  background-color: var( --secondary-color);*/
   padding: 3px 5px 3px 20px;
   
 /*    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
@@ -70,31 +71,37 @@ header li {
 }
 
 header nav ul li a {
-  color: var(--primary-color);
+  color: var(--color-6);
   text-decoration: none;
   padding: 5px 15px;
   font-weight: normal;
   font-size: 1.55vw;
-  border-color: var(--primary-color);
+  border-color: var(--color-6);
   border-bottom: 3px solid;
+  transition-duration: 0.2s;
+}
+
+header nav ul li a:hover {
+  color: var(--color-4);
 }
 
 .hero {
-/*    background-image: url("../images/hero-bg.jpg");*/
-/*    background-size: cover;*/
-/*  background-position: center;*/
-  background-color: #0A1A5F;
+background-image: url("../images/_DSC4858.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+/*  background-color: rgba(232,230,229,1.00);*/
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   align-items: flex-end;
-  background-attachment: fixed;
-  background-position: 80%;
-  min-height: 200px;
+/*  background-attachment: fixed;*/
+/*  background-position: 33%;*/
+  min-height: 400px;
 }
 
 .hero h2 {
-  background-color: var( --secondary-color);
+  background-color: var(--color-3);
   font-size: 35px;
   padding: 2px 8px;
   margin-bottom: 15px;  
@@ -102,6 +109,7 @@ header nav ul li a {
 
 main {
   position: relative;
+  background-color: var(--color-5);
 
 }
 
@@ -143,12 +151,16 @@ main section ul {
 }
 
 section ul li a {
-  color: red;
+  color: var(--color-6);
   text-decoration: none;
   font-weight: normal;
   font-size: 20px;
-  border-color: var(--primary-color);
+  border-color: var(--color-6);
   border-bottom: 3px solid;
+}
+
+section ul li a:hover {
+  color: var(--color-4);
 }
 
 main section ul li{
@@ -172,19 +184,21 @@ main section ul li{
   justify-content: flex-start;
   align-items: flex-end;
   text-align: left;
-  border: 5px solid var(--secondary-color);
+  border: 5px solid var(--color-2);
   /* margin: 5px; */
 /*  border-radius: 5px;*/
   font-size: 25px;
-  background-color: aquamarine;
+  background-color: var(--color-1);
   transition: .5s;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .grid-item::after {
     content: "";
     height: 100%;
     width: 100%;
-    background: rgba(255,0,4,0.45);
+    background: var(--color-3);
     position: absolute;
     top: 0;
     left: 0;
@@ -192,16 +206,22 @@ main section ul li{
     transition: 0.5s;
 }
 
-.grid-item:hover::after {
-  opacity: 1;
-  
+.grid-item:hover::after{
+  opacity: .25;
 }
 
 .grid-text {
+  position:relative;
+  left: -200px;
   background-color: var(--color-2-a);
   padding: 5px 5px 5px 10px;
   margin: 15px 0px;
   z-index: 9998;
+  transition: 0.5s;
+}
+
+.grid-item:hover .grid-text {
+  left: 0px;
 }
 
 .grid-text h4 {
@@ -210,12 +230,14 @@ main section ul li{
 
 .grid-text p {
   font-size: 16px;
-  color: blue;
+  color: var(--color-3);
 }
 
 .item-1 {
+  background-image: url("../images/run-buddy.png");
   grid-column:  span 2;
   grid-row: span 2;
+  background-size: cover;
 }
 
 
@@ -266,6 +288,10 @@ main section ul li{
   
   .section-content {
     text-align: center;
+  }
+  
+  .grid-text {
+    left: 0px;
   }
   
   section:not(:first-of-type) {
