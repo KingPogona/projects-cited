@@ -23,10 +23,13 @@ html {
   color: black;
 /*  text-shadow: 0 2px 0 rgba(122, 59, 59, 0.07);*/
 }
+
+/*body rules start*/
 body {
   background-color: var( --background-color);
 }
 
+/*Header rules start*/
 header {
   top: 0;
   background-color: var(--color-1);
@@ -79,7 +82,9 @@ header nav ul li a {
 header nav ul li a:hover {
   color: var(--color-4);
 }
+/*header rules end*/
 
+/*hero rules start*/
 .hero {
 background-image: url("../images/hero-bg.jpg");
   background-size: cover;
@@ -101,7 +106,10 @@ background-image: url("../images/hero-bg.jpg");
   padding: 2px 8px;
   margin-bottom: 15px;  
 }
+/*hero rules end*/
 
+/*main section start*/
+/*general section rules*/
 main {
   position: relative;
   background-color: var(--color-5);
@@ -149,16 +157,17 @@ main section {
   margin: 20px;
 }
 
-main #contact-me {
-  align-items: center;
-}
-
 main section ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 90%;
+}
+
+main section ul li{
+  margin: 0 5px;
+  padding: 10px 5px;
 }
 
 section ul li a {
@@ -174,11 +183,11 @@ section ul li a:hover {
   color: var(--color-4);
 }
 
-main section ul li{
-  margin: 0 5px;
-  padding: 10px 5px;
+main #contact-me {
+  align-items: center;
 }
 
+/*grid rules start*/
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -244,13 +253,16 @@ main section ul li{
   color: var(--color-3);
 }
 
+/*unique grid item rules*/
 .item-1 {
   background-image: url("../images/run-buddy.png");
   grid-column:  span 2;
   grid-row: span 2;
   background-size: cover;
 }
-
+/*grid rules end*/
+/*main section end*/
+/*body rules end*/
 
 
 
