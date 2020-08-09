@@ -1,10 +1,10 @@
 :root {
     --color-1: #C7D2E4;
     --color-2: #7AA6D1;
-    --color-2-a: rgba(122,166,209,0.50);
+    --color-2-a: rgba(122,166,209,0.40);
     --color-3: #3282BF;
     --color-4: #84918D;
-    --color-5: #DAEAEA;
+    --color-5: #E0EAEA;
     --color-6: #1C2A25;
 }
 
@@ -50,7 +50,7 @@ header h1 {
   font-weight: bold;
   font-size: 40px;
   color: var(--color-6);
-/*  background-color: var( --secondary-color);*/
+  background-color: var( --color-2);
   padding: 3px 5px 3px 20px;
   
 /*    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
@@ -138,6 +138,22 @@ main section {
   font-size: 16px;
 }
 
+.section-image img {
+  height: 200px;
+  border: 5px solid;
+  border-color: var(--color-3);
+}
+
+.section-image {
+  flex: 0 auto;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.about-me-text {
+  margin: 20px;
+}
+
 main #contact-me {
   align-items: center;
 }
@@ -184,7 +200,7 @@ main section ul li{
   justify-content: flex-start;
   align-items: flex-end;
   text-align: left;
-  border: 5px solid var(--color-2);
+  border: 5px solid var(--color-3);
   /* margin: 5px; */
 /*  border-radius: 5px;*/
   font-size: 25px;
@@ -212,7 +228,7 @@ main section ul li{
 
 .grid-text {
   position:relative;
-  left: -200px;
+/*  left: -200px;*/
   background-color: var(--color-2-a);
   padding: 5px 5px 5px 10px;
   margin: 15px 0px;
@@ -221,7 +237,7 @@ main section ul li{
 }
 
 .grid-item:hover .grid-text {
-  left: 0px;
+/*  left: 0px;*/
 }
 
 .grid-text h4 {
@@ -248,7 +264,7 @@ main section ul li{
   
   header nav ul {
   padding: 5px 0 15px 0;
-}
+  }
   
   header nav ul li a{
     font-size: 1.7vw;
@@ -292,6 +308,10 @@ main section ul li{
   
   .grid-text {
     left: 0px;
+  }
+  
+  #about-me  {
+    justify-content: center;
   }
   
   section:not(:first-of-type) {
