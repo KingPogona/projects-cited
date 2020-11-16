@@ -240,14 +240,6 @@ main #contact-me {
   transition: 0.5s;
 }
 
-.grid-item:hover .grid-text {
-/*  left: 0px;*/
-}
-
-.grid-text h4 {
-  
-}
-
 .grid-text p {
   font-size: 16px;
   color: var(--color-3);
@@ -255,9 +247,23 @@ main #contact-me {
 
 /*unique grid item rules*/
 .item-1 {
-  background-image: url("../images/run-buddy.png");
+  background-image: url("../images/main-view.PNG");
   grid-column:  span 2;
   grid-row: span 2;
+  background-size: cover;
+}
+
+.item-2 {
+  background-image: url("../images/run-buddy.png");
+  grid-column:  span 1;
+  grid-row: span 1;
+  background-size: cover;
+}
+
+.item-3 {
+  background-image: url("../images/WhatDoYouWantToEat.png");
+  grid-column:  span 2;
+  grid-row: span 1;
   background-size: cover;
 }
 /*grid rules end*/
